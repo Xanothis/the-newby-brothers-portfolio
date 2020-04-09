@@ -5,5 +5,8 @@
  */
 
 module.exports = {
-  /* Your site config here */
-}
+    siteMetadata: {
+        title: `The Newby Brothers`,
+    },
+    plugins: [`gatsby-plugin-sass`, `gatsby-plugin-resolve-src`],
+};
