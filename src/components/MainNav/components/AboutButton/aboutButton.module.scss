@@ -1,0 +1,43 @@
+.root {
+  position: fixed;
+  z-index: 999;
+  top: 28px;
+  right: 35px;
+  width: 80px;
+  height: 80px;
+}
+
+.buttonBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: translateX(0);
+  will-change: transform;
+  transition: 0.2s transform ease;
+
+  .root:hover & {
+    transform: scale(1.2) translateX(0);
+  }
+}
+
+.button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 21px;
+  line-height: 21px;
+  font-family: sans-serif;
+  font-weight: normal;
+  cursor: pointer;
+  transform: rotate(15deg);
+  background: none;
+  z-index: 1;
+  backface-visibility: hidden;
+}

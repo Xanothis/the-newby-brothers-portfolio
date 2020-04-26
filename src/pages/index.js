@@ -1,12 +1,21 @@
 import React from "react";
-import Layout from "../components/Layout";
 import { graphql } from "gatsby";
+import MainNav from "components/MainNav";
+import PointerHand from "components/Svg/PointerHand";
+import styles from "./index.module.scss";
 
 export default ({ data }) => {
     console.log("data", data);
     return (
-        <Layout>
-            <h1>Welcome!</h1>
+        <>
+            <MainNav />
+            <div className={styles.content}>
+                <h1>
+                    Welcome. We are the Newby Brothers and here you’ll find some examples of our passion for design and
+                    user experience
+                </h1>
+                <PointerHand className={styles.pointerHandIcon} />
+            </div>
             {data.allContentfulProjectContainer.edges.map(edge => {
                 return (
                     <div>
@@ -15,7 +24,7 @@ export default ({ data }) => {
                     </div>
                 );
             })}
-        </Layout>
+        </>
     );
 };
 

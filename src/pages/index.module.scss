@@ -1,0 +1,22 @@
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 0 auto;
+  padding: 100px 35px;
+  box-sizing: border-box;
+  max-width: 1338px;
+
+  h1 {
+    color: black;
+    font-size: 60px;
+    line-height: 64px;
+    font-family: sans-serif;
+    font-weight: normal;
+  }
+
+}
+
+.pointerHandIcon {
+  padding: 100px 0;
+}
