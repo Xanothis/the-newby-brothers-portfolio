@@ -1,11 +1,10 @@
 import React from "react";
-import { graphql } from "gatsby";
 import MainNav from "components/MainNav";
 import PointerHand from "components/Svg/PointerHand";
 import styles from "./index.module.scss";
+import ProjectCards from "components/ProjectCards";
 
-export default ({ data }) => {
-    console.log("data", data);
+export default () => {
     return (
         <>
             <MainNav />
@@ -15,28 +14,8 @@ export default ({ data }) => {
                     user experience
                 </h1>
                 <PointerHand className={styles.pointerHandIcon} />
+                <ProjectCards />
             </div>
-            {data.allContentfulProjectContainer.edges.map(edge => {
-                return (
-                    <div>
-                        <h1>title: {edge.node.title}</h1>
-                        <p>slug: {edge.node.slug}</p>
-                    </div>
-                );
-            })}
         </>
     );
 };
-
-export const query = graphql`
-    query {
-        allContentfulProjectContainer {
-            edges {
-                node {
-                    title
-                    slug
-                }
-            }
-        }
-    }
-`;

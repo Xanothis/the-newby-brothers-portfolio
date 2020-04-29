@@ -5,7 +5,7 @@
   margin: 0 auto;
   padding: 100px 35px;
   box-sizing: border-box;
-  max-width: 1338px;
+  max-width: 2000px; // change to 2560px
 
   h1 {
     color: black;
@@ -13,6 +13,7 @@
     line-height: 64px;
     font-family: sans-serif;
     font-weight: normal;
+    max-width: 1338px;
   }
 
 }
